@@ -328,7 +328,7 @@
         activateTemplate(router, template, route, url, eventDetail);
       } else {
         // custom element
-        activateCustomElement(router, route.getAttribute('element') || importUri.split('/').slice(-1)[0].replace('.html', ''), route, url, eventDetail);
+        activateCustomElement(router, route.getAttribute('element') || importUri.split('/').slice(-1)[0].split('?').slice(0, 1)[0].replace('.html', ''), route, url, eventDetail);
       }
     }
   }
